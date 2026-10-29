@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find thoughtful gifts for every special moment at Giftify.">
+  <title>Giftify — Little Gifts, Big Feelings</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    Made with love, wrapped with care ♡
+  </div>
+
+  <header class="navbar">
+    <a href="#" class="logo">giftify<span>♥</span></a>
+
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">Our story</a>
+    </nav>
+
+    <a href="#shop" class="cart-link">
+      Bag <span id="cartCount">0</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">A LITTLE SOMETHING SPECIAL ✿</span>
+        <h1>Little gifts.<br>Big <em>feelings.</em></h1>
+        <p>
+          Thoughtful little treasures for the people
+          who make your world a little brighter.
+        </p>
+        <a href="#shop" class="primary-btn">Find your perfect gift ↗</a>
+        <div class="hero-note">♡ Packed with love, always.</div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=1000&q=85"
+          alt="Beautifully wrapped gifts and flowers">
+        <span class="floating-note">made for<br>your favourite person ♡</span>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <span class="eyebrow">THE GIFT EDIT</span>
+        <h2>A little joy, <em>just for them.</em></h2>
+        <p>Because every occasion deserves a little magic.</p>
+      </div>
+
+      <div class="shop-tools">
+        <div class="categories" id="categories">
+          <button class="category active" data-category="All">All gifts</button>
+          <button class="category" data-category="Birthday">Birthday</button>
+          <button class="category" data-category="Anniversary">Anniversary</button>
+          <button class="category" data-category="Hampers">Hampers</button>
+          <button class="category" data-category="Personalized">Personalized</button>
+        </div>
+
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="searchInput"
+            placeholder="Find a little something..."
+            aria-label="Search gifts">
+        </label>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>
+        No gifts found. Try another search, lovely! ♡
+      </p>
+
+      <section class="cart-section" id="cart">
+        <div class="section-heading">
+          <span class="eyebrow">YOUR LITTLE COLLECTION</span>
+          <h2>Your gift <em>bag.</em></h2>
+        </div>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <div class="cart-summary">
+          <p>Subtotal <strong id="subtotal">₹0</strong></p>
+          <p class="small-note">Delivery charges, if any, will be confirmed by the shop.</p>
+          <div class="total-line">
+            <span>Estimated total</span>
+            <strong id="total">₹0</strong>
+          </div>
+        </div>
+
+        <form id="orderForm" class="order-form">
+          <h3>Make it personal ♡</h3>
+
+          <label>
+            Your name
+            <input name="customerName" required maxlength="80"
+              placeholder="Your lovely name">
+          </label>
+
+          <label>
+            Recipient's name
+            <input name="recipient" required maxlength="80"
+              placeholder="Who is this gift for?">
+          </label>
+
+          <label>
+            Occasion
+            <select name="occasion" required>
+              <option value="">Choose an occasion</option>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Friendship</option>
+              <option>Graduation</option>
+              <option>Just because</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>
+            Gift message (optional)
+            <textarea name="giftMessage" maxlength="300"
+              placeholder="A little note from your heart..."></textarea>
+          </label>
+
+          <button type="submit" class="primary-btn whatsapp-btn">
+            Order via WhatsApp ↗
+          </button>
+          <p class="small-note">
+            Your order request will open in WhatsApp for you to review and send.
+          </p>
+          <p id="orderFeedback" class="feedback" role="status"></p>
+        </form>
+      </section>
+    </section>
+
+    <section class="about-section" id="about">
+      <span class="eyebrow">A NOTE FROM US</span>
+      <h2>It's never just a gift.<br>It's a little <em>piece of love.</em></h2>
+      <p>
+        At Giftify, we believe the smallest gestures can mean the most.
+        Find something thoughtful for someone who matters.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">giftify<span>♥</span></a>
+    <p>Little gifts, big feelings. Made with ♡</p>
+    <p class="small-note">A demo storefront for a small gift business.</p>
+  </footer>
+</body>
+</html>
